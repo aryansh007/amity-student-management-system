@@ -1,0 +1,111 @@
+{
+  "students": [
+    {
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@amity.edu",
+      "phone": "9876543210",
+      "course": "Computer Science",
+      "attendance": "84",
+      "feesStatus": "unpaid",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Priya Patel",
+      "email": "priya.patel@amity.edu",
+      "phone": "8765432109",
+      "address": "456, Park Street, Mumbai",
+      "course": "MBA",
+      "batch": "2024",
+      "fees": {
+        "total": 200000,
+        "paid": 200000,
+        "due": 0,
+        "status": "Paid"
+      },
+      "attendance": 92
+    },
+    {
+      "id": "3",
+      "name": "Amit Singh",
+      "email": "amit.singh@amity.edu",
+      "phone": "7654321098",
+      "address": "789, Lake View, Bangalore",
+      "course": "B.Sc Physics",
+      "batch": "2026",
+      "fees": {
+        "total": 120000,
+        "paid": 0,
+        "due": 120000,
+        "status": "Unpaid"
+      },
+      "attendance": 78
+    },
+    {
+      "name": "Aryan Sharma",
+      "email": "sharmaaryan@gmail.com",
+      "phone": "07339745642",
+      "course": "Computer Science",
+      "attendance": "89",
+      "feesStatus": "partial",
+      "id": "d0UMte4SX2U"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "name": "B.Tech Computer Science",
+      "duration": "4 years",
+      "studentsEnrolled": 120
+    },
+    {
+      "id": "2",
+      "name": "MBA",
+      "duration": "2 years",
+      "studentsEnrolled": 80
+    },
+    {
+      "id": "3",
+      "name": "B.Sc Physics",
+      "duration": "3 years",
+      "studentsEnrolled": 60
+    }
+  ],
+  "attendance": [
+    {
+      "studentId": 1,
+      "date": "2026-05-23",
+      "status": "Present",
+      "id": "2iWgSVMfR8M"
+    },
+    {
+      "studentId": 2,
+      "date": "2026-05-23",
+      "status": "Present",
+      "id": "x1CIJ-KWzj0"
+    },
+    {
+      "studentId": 3,
+      "date": "2026-05-23",
+      "status": "Absent",
+      "id": "2Cll6ydWgj0"
+    }
+  ],
+  "fees": [
+    {
+      "studentId": 1,
+      "amount": 75000,
+      "date": "2026-05-01",
+      "status": "Paid",
+      "id": "FA28asyuwtI"
+    },
+    {
+      "studentId": 2,
+      "amount": 200000,
+      "date": "2026-05-10",
+      "status": "Paid",
+      "id": "bryJKghLTWA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
