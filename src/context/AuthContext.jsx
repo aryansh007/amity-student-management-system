@@ -15,12 +15,12 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password,type) => {
-    if (email === 'admin@amity.com' && password === '123456' && type === 'admin') {
+    if (email === 'admin@amity.com' && password === 'adminA@1q' && type === 'admin') {
       setIsAuthenticated(true);
       localStorage.setItem('isAuthenticated', 'true');
       localStorage.setItem('role', 'admin');
       return true;
-    } else if (email === 'student@amity.com' && password === 'student123' && type === 'student') {
+    } else if (email === 'student@amity.com' && password === 'student@aq1' && type === 'student') {
       setIsAuthenticated(true);
       localStorage.setItem('isAuthenticated', 'true');
       localStorage.setItem('role', 'student');

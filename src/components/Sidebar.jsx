@@ -6,18 +6,20 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <li><Link to="/dashboard">Dashboard</Link></li>
+        {/* Link ko li ke bahar lapet diya */}
+        <Link to="/dashboard"><li>Dashboard</li></Link>
+        
         {role === 'admin' && (
           <>
-            <li><Link to="/students">Students</Link></li>
-            <li><Link to="/college-profile">College Profile</Link></li>
-            <li><Link to="/our-campuses">Our Campuses</Link></li>
-
+            <Link to="/students"><li>Students</li></Link>
+            <Link to="/college-profile"><li>College Profile</li></Link>
+            <Link to="/our-campuses"><li>Our Campuses</li></Link>
           </>
         )}
-        <li><Link to="/attendance">Attendance</Link></li>
-        <li><Link to="/fees">Fees</Link></li>
-        <li><Link to="/courses">Courses</Link></li>
+        
+        <Link to="/attendance"><li>Attendance</li></Link>
+        <Link to="/fees"><li>Fees</li></Link>
+        <Link to="/courses"><li>Courses</li></Link>
       </ul>
     </div>
   );

@@ -41,6 +41,7 @@
     transition: all 0.3s;
 }
 
+
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -57,9 +58,12 @@
     background: #34495e;
 }
 
+/* Purani .sidebar a ko badal kar ye kar do */
 .sidebar a {
     color: white;
     text-decoration: none;
+    display: block;
+    /* Isse link poori width cover karega */
 }
 
 /* Main Content */

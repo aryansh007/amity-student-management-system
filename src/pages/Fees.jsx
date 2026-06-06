@@ -50,7 +50,7 @@ const Fees = () => {
 
   return (
     <div className="fees-page">
-      <h1>{localStorage.getItem('role') === 'student' ? 'Your Fees' : 'Fees'}</h1>
+      <h1>{localStorage.getItem('role') === 'student' ? 'Your Fees (Paid)' : 'Fees'}</h1>
       {loading ? (
         <div className="loading">Loading fee records...</div>
       ) : fees.length === 0 ? (

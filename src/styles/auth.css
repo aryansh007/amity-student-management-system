@@ -99,3 +99,40 @@
     background: #95a5a6;
     cursor: not-allowed;
 }
+
+/* Wrapper to position the button absolute to this container */
+.password-input-wrapper {
+    position: relative;
+    display: inline-block;
+    /* Ya width: 100% agar aapka input full width hai */
+    width: auto;
+}
+
+/* Make sure password input behaves nicely inside wrapper */
+.password-input-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Transparent button styled over the input field */
+.password-toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: #666;
+    /* Adjust color as needed */
+}
+
+.password-toggle-btn:hover {
+    color: #333;
+    background: none !important;
+    /* Button background reset if global styles interfere */
+    box-shadow: none !important;
+}
