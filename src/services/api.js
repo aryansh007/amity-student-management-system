@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://amity-student-management-api.onrender.com/students';
 
 const handleResponse = async (response) => {
   if (!response.ok) {
