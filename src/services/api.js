@@ -56,8 +56,12 @@ export default {
   addStudent,
   updateStudent,
   deleteStudent,
-  getFees: async () => {
-    return apiRequest('/fees', 'GET');
+  getFees: async (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return apiRequest(`/fees?${query}`, 'GET');
+  },
+  getFeesByStudentId: async (studentId) => {
+    return apiRequest(`/fees?studentId=${studentId}`, 'GET');
   },
   getCourses: async () => {
     return apiRequest('/courses', 'GET');

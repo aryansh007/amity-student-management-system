@@ -23,7 +23,8 @@ const Fees = () => {
   const fetchFees = async () => {
     try {
       setLoading(true);
-      const data = await api.getFees();
+      const isStudent = localStorage.getItem('role') === 'student';
+      const data = isStudent ? await api.getFeesByStudentId(4) : await api.getFees();
       setFees(data);
     } catch (error) {
       console.error('Failed to fetch fees:', error);
@@ -49,7 +50,7 @@ const Fees = () => {
 
   return (
     <div className="fees-page">
-      <h1>Fees</h1>
+      <h1>{localStorage.getItem('role') === 'student' ? 'Your Fees' : 'Fees'}</h1>
       {loading ? (
         <div className="loading">Loading fee records...</div>
       ) : fees.length === 0 ? (

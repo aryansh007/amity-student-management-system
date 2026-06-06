@@ -1,6 +1,20 @@
 {
   "students": [
     {
+      "name": "Adithya Gautam",
+      "email": "adithya@amity.com",
+      "phone": "9876543211",
+      "course": "Computer Science",
+      "attendance": "87",
+      "fees": {
+        "total": 100000,
+        "paid": 50000,
+        "due": 50000,
+        "status": "Partial"
+      },
+      "id": "4"
+    },
+    {
       "name": "Rahul Sharma",
       "email": "rahul.sharma@amity.edu",
       "phone": "9876543210",
@@ -92,6 +106,13 @@
     }
   ],
   "fees": [
+    {
+      "studentId": 4,
+      "amount": 50000,
+      "date": "2026-05-15",
+      "status": "Paid",
+      "id": "FA28asyuwtJ"
+    },
     {
       "studentId": 1,
       "amount": 75000,

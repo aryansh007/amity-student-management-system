@@ -66,11 +66,11 @@ const Dashboard = () => {
 
   const isStudent = localStorage.getItem('role') === 'student';
 
-  // Mock data for Rahul Sharma
+  // Mock data for Adithya Gautam
   const studentData = {
-    name: 'Rahul Sharma',
+    name: 'Adithya Gautam',
     course: 'Computer Science',
-    email: 'rahul@amity.com',
+    email: 'adithya@amity.com',
     feesPaid: 50000,
     totalFees: 100000,
     attendancePercentage: 87
@@ -79,23 +79,28 @@ const Dashboard = () => {
   return (
     <div className="dashboard-page">
       {isStudent ? (
-        <div className="student-dashboard">
-          <div className="student-card">
-            <h2>Personal Info</h2>
-            <p>Name: {studentData.name}</p>
-            <p>Course: {studentData.course}</p>
-            <p>Email: {studentData.email}</p>
+          <div className="student-dashboard">
+            <div className="student-card">
+              <h2>Welcome {studentData.name}</h2>
+              <p>Course: {studentData.course}</p>
+              <p>Email: {studentData.email}</p>
+            </div>
+            <div className="student-card">
+              <h2>Course & Fees</h2>
+              <p>Course: {studentData.course}</p>
+              <p>Fees Paid: ₹{studentData.feesPaid} / ₹{studentData.totalFees}</p>
+            </div>
+            <div className="student-card">
+              <h2>Attendance</h2>
+              <p>Overall: {studentData.attendancePercentage}%</p>
+            </div>
+            <div className="student-card">
+              <h2>Upcoming Events</h2>
+              <p>Exam: June 15, 2026</p>
+              <p>Project Submission: June 20, 2026</p>
+            </div>
+            
           </div>
-          <div className="student-card">
-            <h2>Course & Fees</h2>
-            <p>Course: {studentData.course}</p>
-            <p>Fees Paid: ₹{studentData.feesPaid} / ₹{studentData.totalFees}</p>
-          </div>
-          <div className="student-card">
-            <h2>Attendance</h2>
-            <p>Overall: {studentData.attendancePercentage}%</p>
-          </div>
-        </div>
       ) : (
         <>
           <div className="dashboard-cards">

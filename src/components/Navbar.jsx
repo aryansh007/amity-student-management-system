@@ -9,7 +9,7 @@ const Navbar = () => {
       <h1>Amity Student Management System</h1>
       {isAuthenticated && (
         <div className="user-info">
-          <span>Welcome, Admin</span>
+          <span>Welcome, {localStorage.getItem('role') === 'student' ? 'Adithya Gautam' : 'Admin'}</span>
           <button onClick={logout}>Logout</button>
         </div>
       )}

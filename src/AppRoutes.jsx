@@ -1,8 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import ProtectedRoute from './components/ProtectedRoute';
+
 import AuthLayout from './layouts/AuthLayout';
 import DashboardLayout from './layouts/DashboardLayout';
+
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Students from './pages/Students';
@@ -17,10 +20,13 @@ import NotFound from './pages/NotFound';
 const AppRoutes = () => {
   return (
     <Routes>
+      {/* Auth Routes */}
       <Route element={<AuthLayout />}>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
       </Route>
+
+      {/* Protected Routes */}
       <Route element={<DashboardLayout />}>
         <Route
           path="/dashboard"
@@ -30,6 +36,7 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/fees"
           element={
@@ -38,6 +45,7 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/courses"
           element={
@@ -46,51 +54,54 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
-        {localStorage.getItem('role') === 'admin' && (
-          <>
-            <Route
-              path="/students"
-              element={
-                <ProtectedRoute>
-                  <Students />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/attendance"
-              element={
-                <ProtectedRoute>
-                  <Attendance />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/profile"
-              element={
-                <ProtectedRoute>
-                  <Profile />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/college-profile"
-              element={
-                <ProtectedRoute>
-                  <CollegeProfile />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/our-campuses"
-              element={
-                <ProtectedRoute>
-                  <OurCampuses />
-                </ProtectedRoute>
-              }
-            />
-          </>
-        )}
+
+        <Route
+          path="/students"
+          element={
+            <ProtectedRoute>
+              <Students />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/attendance"
+          element={
+            <ProtectedRoute>
+              <Attendance />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/college-profile"
+          element={
+            <ProtectedRoute>
+              <CollegeProfile />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/our-campuses"
+          element={
+            <ProtectedRoute>
+              <OurCampuses />
+            </ProtectedRoute>
+          }
+        />
       </Route>
+
+      {/* 404 */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
